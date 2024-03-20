@@ -1,0 +1,63 @@
+sat
+(
+  (define-fun t7 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) A true)
+           (store ((as const (Set NT)) false) B true)
+           (store ((as const (Set NT)) false) C true))))
+  (define-fun t15 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) A true)
+           (store ((as const (Set NT)) false) C true)
+           (store ((as const (Set NT)) false) B true))))
+  (define-fun t17 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t16 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) A true)
+           (store ((as const (Set NT)) false) B true)
+           (store ((as const (Set NT)) false) C true))))
+  (define-fun t0 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) B true)
+           (store ((as const (Set NT)) false) C true))))
+  (define-fun t8 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t3 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) B true)
+           (store ((as const (Set NT)) false) C true)
+           ((as const (Set NT)) false))))
+  (define-fun t5 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t6 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t4 () Type
+    (mk-type false
+         ((_ map (or (Bool Bool) Bool))
+           (store ((as const (Set NT)) false) B true)
+           (store ((as const (Set NT)) false) C true))))
+  (define-fun t1 () Type
+    (mk-type false (store ((as const (Set NT)) false) C true)))
+  (define-fun t12 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t9 () Type
+    (mk-type false (store ((as const (Set NT)) false) C true)))
+  (define-fun t11 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t10 () Type
+    (mk-type false (store ((as const (Set NT)) false) C true)))
+  (define-fun t2 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t14 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun t13 () Type
+    (mk-type false ((as const (Set NT)) false)))
+  (define-fun empty () (Set NT)
+    ((as const (Set NT)) false))
+)

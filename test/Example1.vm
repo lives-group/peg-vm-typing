@@ -1,0 +1,24 @@
+0 : ICall (Pos 3)
+1 : IChr 'a'
+2 : IJmp (Pos 21)
+3 : IChoice (Pos 4)
+4 : ICall (Pos 10)
+5 : IChr 'a'
+6 : ICall (Pos 3)
+7 : ICommit (Pos 2)
+8 : IChr 'b'
+9 : IReturn
+10 : IChoice (Pos 5)
+11 : ICall (Pos 18)
+12 : IChoice (Pos 3)
+13 : IChr 'c'
+14 : ICommit (Pos (-2))
+15 : ICommit (Pos 2)
+16 : IChr 'c'
+17 : IReturn
+18 : IChoice (Pos 4)
+19 : IChr 'd'
+20 : IChr 'a'
+21 : IFail
+22 : IReturn
+23 : IEnd
