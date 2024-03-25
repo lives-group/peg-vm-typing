@@ -1,0 +1,4 @@
+B --> (UJ)/(JJ);
+U --> ("a"J)*;
+J --> "a"U;
+@start: !BUB

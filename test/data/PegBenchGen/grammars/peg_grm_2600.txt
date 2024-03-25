@@ -1,0 +1,4 @@
+P --> (WW)/X/"a";
+W --> "a"XX;
+X --> "a"/"a";
+@start: W/"a"WX

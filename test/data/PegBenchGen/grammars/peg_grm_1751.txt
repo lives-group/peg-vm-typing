@@ -1,0 +1,4 @@
+S --> ("a"*"a")*;
+Q --> "aa"*"aa"S/"a"*;
+M --> ("a"*/"a"*Q/Q)/(SQ)/S;
+@start: "a"M"a"SSQ*

@@ -1,0 +1,4 @@
+W --> !"cd";
+G --> "b"/WW"b";
+Q --> G"b"*;
+@start: GQQ/"a"*

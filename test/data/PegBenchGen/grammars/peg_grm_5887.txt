@@ -1,0 +1,4 @@
+B --> "b"/(UW);
+W --> "bb""bc";
+U --> (WW)/W*;
+@start: W/B*

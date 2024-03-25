@@ -1,0 +1,4 @@
+V --> "bc"/!"b";
+H --> "c"*;
+N --> HVVV;
+@start: "ba"V"a"

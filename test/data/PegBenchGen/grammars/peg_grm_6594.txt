@@ -1,0 +1,4 @@
+W --> "aa";
+H --> OW;
+O --> W*;
+@start: OH

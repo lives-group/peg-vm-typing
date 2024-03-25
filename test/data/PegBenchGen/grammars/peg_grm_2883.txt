@@ -1,0 +1,4 @@
+B --> "a"*"a"*"a"/"a";
+G --> (B/(BB))*;
+T --> B/"a"*GBB/B"a";
+@start: T/"a"*B*G

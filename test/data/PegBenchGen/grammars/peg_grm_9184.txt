@@ -1,0 +1,4 @@
+S --> "a"/"a""aa";
+Q --> D/"a"*S/"a"*;
+D --> "a"/S/S;
+@start: QDSD

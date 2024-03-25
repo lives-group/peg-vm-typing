@@ -5,20 +5,22 @@ import Control.Monad.Except
 import Control.Monad.State 
 import Data.List (union)
 import Data.Maybe
+import Data.Void
 import ParserExpression 
-import PEGParser
 import System.Process hiding (env)
 import Text.Megaparsec
-import Text.Megaparsec.Char
 import qualified Text.Megaparsec.Char.Lexer as L
+import Control.Monad.Combinators.Expr 
+import Text.Megaparsec.Char
 
+type Parser = Parsec Void String
 
 -- top level type inference 
 
 typeInfer :: Grammar -> IO Env 
 typeInfer g 
   = case genConstr g of 
-      Left err -> error "invalid grammar"
+      Left _ -> error "invalid grammar"
       Right (env,c) -> solveConstr c env 
 
 -- top level constraint solving 
@@ -33,7 +35,7 @@ solveConstr c env
       writeFile "./Constr.smt" script1
       out <- readProcess "z3" ["./Constr.smt"] ""
       case parse parseModel "" out of
-        Left err1 -> error "Type error in input grammar!" 
+        Left _ -> error "Type error in input grammar!" 
         Right (Model _ env') -> 
           return [(s,t) | (s,tn) <- res
                         , (tn', t) <- env'
@@ -107,7 +109,7 @@ genConstrRules :: Env -> [(String, Expr)] -> GenM Constr
 genConstrRules env 
   = foldM step Top 
     where 
-      step ac (v, e) 
+       step ac (v, e) 
         = do
             let t = fromJust $ lookup v env 
             c <- genConstrExpr env e t
@@ -283,7 +285,7 @@ parseDef
       _ <- symbol "define-fun" ; 
       s <- identifier ; 
       params ; 
-      parseAType ; 
+      _ <- parseAType ; 
       parseBody s
     } 
 
@@ -353,11 +355,79 @@ unionToken :: Parser ()
 unionToken 
   = () <$ symbol "(_ map (or (Bool Bool) Bool))"
 
-test = do 
-  str <- readFile "./test/Example1.peg"
-  let g = parser str
-  case g of 
-    Left err -> putStrLn err
-    Right g' -> do 
-      env <- typeInfer g' 
-      mapM_ print env
+prefix, postfix :: String -> (Expr -> Expr) -> Operator Parser Expr
+prefix  name f = Prefix  (f <$ symbol name)
+postfix name f = Postfix (f <$ symbol name)
+
+-- definition of the lexer 
+
+sc :: Parser ()
+sc = L.space (void spaceChar) lineCmnt blockCmnt
+  where lineCmnt  = L.skipLineComment "--"
+        blockCmnt = L.skipBlockComment "/-" "-/"
+
+-- function for creating lexemes
+
+lexeme :: Parser a -> Parser a
+lexeme = L.lexeme sc
+
+symbol :: String -> Parser String
+symbol = L.symbol sc
+
+-- 'parens' parses something between parenthesis.
+
+parens :: Parser a -> Parser a
+parens = between (symbol "(") (symbol ")")
+
+-- 'semi' parses a semicolon.
+
+semi :: Parser String
+semi = symbol ";"
+
+-- parsing reserved words 
+
+reserved :: String -> Parser ()
+reserved w = lexeme (string w *> notFollowedBy alphaNumChar)
+
+rws :: [String] -- list of reserved words
+rws = ["<--","epsilon","!", "*", "start:"]
+
+identifier :: Parser String
+identifier = (lexeme . try) (p >>= check)
+  where
+    p       = (:) <$> letterChar <*> many (alphaNumChar <|> char '-')
+    check x = if x `elem` rws
+                then fail $ "keyword " ++ show x ++ " cannot be an identifier"
+                else return x
+
+
+chainl1 :: Parser a -> Parser (a -> a -> a) -> Parser a
+chainl1 p op 
+  = do{ x <- p; rest x }
+    where
+      rest x    = do{ f <- op
+                    ; y <- p
+                    ; rest (f x y)
+                    } <|> return x
+
+
+chainr1 :: Parser a -> Parser (a -> a -> a) -> Parser a
+chainr1 p op        
+  = scan
+    where
+      scan      = do{ x <- p; rest x }
+      rest x    = do{ f <- op
+                    ; y <- scan
+                    ; return (f x y)
+                    } <|> return x
+
+
+-- test :: IO ()
+-- test = do 
+--   str <- readFile "./test/Example1.peg"
+--   let g = parser str
+--   case g of 
+--     Left err -> putStrLn err
+--     Right g' -> do 
+--       env <- typeInfer g' 
+--       mapM_ print env

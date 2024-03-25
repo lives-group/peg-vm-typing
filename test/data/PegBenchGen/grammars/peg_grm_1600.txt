@@ -1,0 +1,4 @@
+S --> "a"J;
+J --> M/S;
+M --> SS;
+@start: J

@@ -1,0 +1,4 @@
+U --> HK"a";
+K --> H/"a"/H;
+H --> "a"/"a"*/"a"*;
+@start: KUU/U

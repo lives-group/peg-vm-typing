@@ -1,0 +1,4 @@
+B --> R/E/R;
+R --> "b"EE;
+E --> "a"/"a";
+@start: R/R/!R

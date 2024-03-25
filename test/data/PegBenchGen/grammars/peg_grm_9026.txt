@@ -1,0 +1,4 @@
+Q --> "b"*;
+F --> "b"/"b"QU;
+U --> QQ"a";
+@start: UQQ

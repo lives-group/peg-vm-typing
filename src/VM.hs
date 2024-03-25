@@ -15,7 +15,6 @@ data Instr
   | ICall Label 
   | IReturn 
   | ICommit Label
-  | IComment String
   | IFail 
   | IEnd 
   deriving (Eq, Show) 

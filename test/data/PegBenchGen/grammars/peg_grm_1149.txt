@@ -1,0 +1,4 @@
+H --> "aa""b""b"/"b"/!"a"*;
+X --> !H"a"*/"a"*H*;
+L --> "a"*!XH"b";
+@start: H/XXX"a""a"/H

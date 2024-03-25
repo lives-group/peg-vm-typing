@@ -1,0 +1,4 @@
+W --> "a"*/"a"*"a"*I/I/I;
+I --> "a""a"*W/"a"*N;
+N --> W/W/"a"/W/"a";
+@start: I*I!I

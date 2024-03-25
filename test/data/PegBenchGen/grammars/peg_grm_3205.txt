@@ -1,0 +1,4 @@
+R --> XO/XOX"a"X;
+X --> !("b"*"b"/"b");
+O --> (X"a")/(XX)(X"a")/"bb";
+@start: (R/"a"*XO)/(X/"a"*"a"/"a")

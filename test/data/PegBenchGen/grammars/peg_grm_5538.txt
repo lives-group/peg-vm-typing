@@ -1,0 +1,4 @@
+G --> "ac"/"a"*;
+N --> !(G"a");
+M --> NNN"c";
+@start: M/NM/"a"

@@ -1,0 +1,4 @@
+C --> (B*"a"B)/U/B/U;
+B --> "aa""aa"CC"a";
+U --> (B"a"*/"a"*)*;
+@start: B/B/(U"a")/U/"a"*/"a"*

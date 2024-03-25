@@ -1,0 +1,4 @@
+S --> !("a"*/"a"*)LLL"a";
+B --> "b"S*"b"*;
+L --> !B!"a"!(BS);
+@start: B/L"b"(LB)/(LS)

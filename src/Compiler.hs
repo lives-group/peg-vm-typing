@@ -1,7 +1,6 @@
 module Compiler where
 
 import ParserExpression
-import PEGParser
 import VM 
 
 -- type to denote jump tables for PEG variables
@@ -19,9 +18,9 @@ compile g
       grules = concatMap snd codeRules
       n = length grules + 1
       codeStart = compileExpr (start g) ++ [IJmp (Pos n)]
-      table = mkJumpTable (length codeStart) codeRules 
+      table' = mkJumpTable (length codeStart) codeRules 
       instrs = codeStart ++ grules ++ [IEnd] 
-    in (table, patchJumps table instrs)
+    in (table', patchJumps table' instrs)
 
 -- patching jumps, given a jump table 
 
@@ -82,16 +81,16 @@ compileExpr (Not e1)
       i1 = IChoice (Pos (n1 + 2))
     in i1 : code1 ++ [IFail]
 
-
-test = do 
-  str <- readFile "./test/Example1.peg"
-  let g = parser str
-  case g of 
-    Left err -> putStrLn err
-    Right g' -> do 
-      let (table, codes) = compile g'
-          cs = zip [0..] codes 
-          s = unlines $ map (\ (n,c) -> show n <> " : " <> show c) cs
-      print table 
-      writeFile "./test/Example1.vm" s
-      
+-- test :: IO ()
+-- test = do 
+--   str <- readFile "./test/Example1.peg"
+--   let g = parser str
+--   case g of 
+--     Left err -> putStrLn err
+--     Right g' -> do 
+--       let (table', codes) = compile g'
+--           cs = zip [0 :: Int ..] codes 
+--           s = unlines $ map (\ (n,c) -> show n <> " : " <> show c) cs
+--       print table' 
+--       writeFile "./test/Example1.vm" s
+--       

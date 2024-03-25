@@ -1,0 +1,4 @@
+Q --> "b"/!"a"*;
+D --> Q"b"Q"c";
+K --> D/Q"c"D;
+@start: "bb"/D

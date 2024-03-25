@@ -1,0 +1,4 @@
+Q --> W*;
+W --> "bc";
+N --> QQ;
+@start: NW

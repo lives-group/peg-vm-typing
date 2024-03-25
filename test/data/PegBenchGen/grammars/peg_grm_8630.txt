@@ -1,0 +1,4 @@
+D --> T/"a"/A/"b"/A;
+T --> ("b"/"a")*"bb"/"b"/"b";
+A --> T"b"*(TD)*;
+@start: A/T/AAD

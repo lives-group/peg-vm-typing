@@ -1,0 +1,4 @@
+B --> !"aa""a"/"a"!"a";
+P --> B/B"a"/B"a";
+T --> (BP)/B/P!B;
+@start: "a"/B/"a"/T/(!T"a"*)

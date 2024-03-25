@@ -1,0 +1,4 @@
+C --> !("ac""ba");
+W --> V/"a"*"c"C"a"/C"ba";
+V --> ("b""c"C)*;
+@start: !(!VCW)

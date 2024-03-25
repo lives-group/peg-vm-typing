@@ -1,0 +1,4 @@
+B --> K/NNK;
+K --> "a"/"a"*"b";
+N --> K*;
+@start: K/NKN

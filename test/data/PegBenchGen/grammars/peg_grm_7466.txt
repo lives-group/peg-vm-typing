@@ -1,0 +1,4 @@
+Q --> !"a""b"/VV/"a";
+V --> "a"Q"b"/"b"Q/"a";
+K --> V/Q/V/Q*;
+@start: ("a"/QQ/K)/(V*"bb")

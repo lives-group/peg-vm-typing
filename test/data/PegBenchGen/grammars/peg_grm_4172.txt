@@ -1,0 +1,4 @@
+F --> ("c"L)/"d"/L;
+K --> F"a""da";
+L --> !"dc";
+@start: F"d"LF

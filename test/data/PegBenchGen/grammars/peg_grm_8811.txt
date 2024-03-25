@@ -1,0 +1,4 @@
+B --> P/"a"/P;
+P --> "ab"*;
+O --> PB"ba";
+@start: "a"PP

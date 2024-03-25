@@ -1,0 +1,4 @@
+U --> X/X/"a"XN/N;
+X --> "a"*"a""aa"/"a";
+N --> !"a"*X/XX"a"*;
+@start: (UU)/X/"a"*/!!"a"*

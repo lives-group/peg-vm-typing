@@ -1,0 +1,4 @@
+J --> "a"*"a"*;
+X --> "a"/J"a"J;
+N --> XX/J;
+@start: "a"XX/"a"

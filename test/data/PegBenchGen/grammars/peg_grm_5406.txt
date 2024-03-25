@@ -1,0 +1,4 @@
+A --> DFF;
+F --> "aa"D;
+D --> "a"*/"a"*;
+@start: F*"a"/A

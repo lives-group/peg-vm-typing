@@ -1,0 +1,4 @@
+U --> II"a"*II"a"I;
+I --> !"a"*/!"a"/"a"*;
+M --> (UU)/U!"a";
+@start: (II"a"I)*

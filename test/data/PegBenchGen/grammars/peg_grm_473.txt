@@ -1,0 +1,4 @@
+P --> "a"*"a";
+D --> "a"*"a"P;
+I --> !PD/D;
+@start: I/"a"DD

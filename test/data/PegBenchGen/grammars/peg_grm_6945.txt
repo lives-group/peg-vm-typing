@@ -1,0 +1,4 @@
+Q --> "ba"/"a"*;
+P --> "b"Q"a";
+U --> QP"ab";
+@start: P/(QP)

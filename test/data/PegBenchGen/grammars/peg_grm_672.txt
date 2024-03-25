@@ -1,0 +1,4 @@
+C --> "a"O!"a"OVO"a";
+V --> ((CC)/"a")*;
+O --> (C/"a")*/(CC)*;
+@start: ("a"C)*C*VC

@@ -1,0 +1,4 @@
+S --> (OOO"a")/("a"O!"a");
+R --> "a"/"a"*!"a""a"/"a"*;
+O --> ("aa"R)/R/!"a";
+@start: !RO/"a"*SSS/O

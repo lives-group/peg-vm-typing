@@ -1,0 +1,4 @@
+A --> PPP/P(PI)/"a"/I;
+P --> "a"/"a"A"a"(AI)*;
+I --> !("a"*AA);
+@start: P/I/"a"*/!("a"/"a")

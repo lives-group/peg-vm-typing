@@ -1,0 +1,4 @@
+R --> "aa"*;
+T --> M"a"R/"a"*;
+M --> RR"b"/R;
+@start: MRM

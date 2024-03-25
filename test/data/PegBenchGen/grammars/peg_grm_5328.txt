@@ -1,0 +1,4 @@
+A --> TT;
+T --> "a"/"a"/"a";
+X --> T"aa";
+@start: T/A/A

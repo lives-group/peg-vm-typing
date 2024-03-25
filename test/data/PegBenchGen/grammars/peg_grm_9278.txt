@@ -1,0 +1,4 @@
+C --> !("a"/"a"*II);
+K --> !"aa"*;
+I --> "a"/"a"/(K"a")"aa"/(K"a");
+@start: (IK)/(K"a")KCI/C

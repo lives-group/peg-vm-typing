@@ -1,0 +1,4 @@
+D --> O/"a"*O/"a"*;
+H --> "a"/"a"*DO;
+O --> "aa""a";
+@start: OO"a"D

@@ -1,0 +1,4 @@
+Q --> J"a"U;
+U --> JJQ/"b";
+J --> "a"*;
+@start: U/"a"*"a"/J

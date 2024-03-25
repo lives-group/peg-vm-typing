@@ -1,0 +1,4 @@
+R --> GXX;
+G --> "b"/"a"X;
+X --> G*;
+@start: (G"b")/(XR)

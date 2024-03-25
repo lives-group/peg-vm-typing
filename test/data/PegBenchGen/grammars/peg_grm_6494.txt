@@ -1,0 +1,4 @@
+B --> (("d"K)/"d")*;
+Q --> BK!BK"d"B"d";
+K --> ("a"/"a""a")*;
+@start: B/"a"*Q/K"c"/K"bc"

@@ -1,0 +1,4 @@
+T --> "b""b";
+X --> L/T/L/T;
+L --> "a"*TT;
+@start: T"a"X/"b"

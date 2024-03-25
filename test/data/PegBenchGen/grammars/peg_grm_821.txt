@@ -1,0 +1,4 @@
+D --> "a"I;
+J --> IDD"a";
+I --> "a"/"a"J/J;
+@start: JJI*

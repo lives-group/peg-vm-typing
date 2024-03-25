@@ -1,0 +1,3 @@
+D --> "bb"*;
+N --> !"b""ab";
+@start: N"b"DD

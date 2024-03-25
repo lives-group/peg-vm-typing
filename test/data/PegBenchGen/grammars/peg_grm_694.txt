@@ -1,0 +1,3 @@
+K --> H/"a"!H;
+H --> "a"*"aa";
+@start: H"a"K

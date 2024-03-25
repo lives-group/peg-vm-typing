@@ -1,0 +1,4 @@
+B --> E*;
+E --> "aa""ac";
+O --> E/EBB;
+@start: E/"c"/"bb"

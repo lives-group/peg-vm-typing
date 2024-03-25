@@ -1,0 +1,4 @@
+S --> !("a"*/"a"*/"a"*);
+C --> S/"a"*SP(SP)*;
+P --> S"a"SS"a"*/"a"/"a"*;
+@start: !S"a"/CCPP/S

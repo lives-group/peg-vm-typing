@@ -1,0 +1,4 @@
+W --> NFN;
+F --> N/N*;
+N --> "a"!"a"*;
+@start: F"b"NF

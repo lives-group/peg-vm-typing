@@ -1,0 +1,4 @@
+W --> (KMM)/(K/KK/M);
+K --> "a"*"a"*!"a"*"aa";
+M --> ("a"*"a")*;
+@start: K"a"K/KW/"a"/(MK)

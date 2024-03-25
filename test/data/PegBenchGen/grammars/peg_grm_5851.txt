@@ -1,0 +1,4 @@
+F --> !("ba"/"d");
+H --> ("ac"F"d")/("d"/FF"a");
+M --> F"a"H/"d"(FH)/H;
+@start: "b"/MFMFM"ac"

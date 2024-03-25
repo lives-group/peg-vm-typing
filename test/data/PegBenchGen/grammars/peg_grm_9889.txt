@@ -1,0 +1,4 @@
+G --> ("ba"LI)/("a"/"c"II);
+I --> !(LGL"a");
+L --> (G/"a"*"a"/"b")/"b"/"c"/"a"*;
+@start: LI"a"/"c"L"ac"

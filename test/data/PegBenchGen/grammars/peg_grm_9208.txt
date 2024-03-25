@@ -1,0 +1,4 @@
+P --> "a"*"b"/G;
+G --> !U;
+U --> "ca"PG;
+@start: "aa"/(UG)

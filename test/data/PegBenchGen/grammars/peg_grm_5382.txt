@@ -1,0 +1,4 @@
+C --> "a"/W/W"a"/"a"/W/"a"*;
+W --> "a""a"/"a"C/C"a";
+V --> (W!"a"*)/(W*W/"a"*);
+@start: WW!"a"!CCC

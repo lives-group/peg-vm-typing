@@ -1,0 +1,4 @@
+R --> (PP)/!"b";
+P --> "b"/"b"/"a"*;
+N --> "a"/P"aa";
+@start: RNPN

@@ -1,0 +1,4 @@
+W --> NNN"a"/L/"a";
+N --> ("a"*L/"a")/!("b"/"a");
+L --> "a"/"b"/"a""ba"N;
+@start: W/W/(NN)W*!L

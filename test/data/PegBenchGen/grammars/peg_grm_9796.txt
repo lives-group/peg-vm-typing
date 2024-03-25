@@ -1,0 +1,4 @@
+S --> "aa"/"a"*"a"*"a"/"a";
+T --> "a"*SS(SI)/"a"*;
+I --> T*S/"a"*T/"a"*T/T;
+@start: TI/S!S

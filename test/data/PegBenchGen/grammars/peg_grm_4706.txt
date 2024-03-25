@@ -1,0 +1,4 @@
+U --> !E!"b""a"/"a""a";
+E --> !!!"a"*;
+K --> "a"/UU/"a"*(EU)/(EU);
+@start: KEU/UK/"a"K

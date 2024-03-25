@@ -1,0 +1,4 @@
+P --> I*;
+I --> "aa"/"aa";
+N --> I/IPP;
+@start: "a"/I*

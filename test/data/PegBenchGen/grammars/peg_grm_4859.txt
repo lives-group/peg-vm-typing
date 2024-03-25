@@ -1,0 +1,4 @@
+F --> ("c"/"b"LL)/E/E/(L"c");
+E --> "c"LL"b"!LL/"a"*;
+L --> ("c"/"b""a"*/"a"*)/(EE)*;
+@start: F/"a"/(EL)/(F/LE)

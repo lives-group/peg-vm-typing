@@ -1,0 +1,4 @@
+U --> "a"*I*"a"*;
+T --> (!III)/("a"/UU"a");
+I --> !"a""a"/"a"UU;
+@start: (IU)/"a"*/"a"*IU!T

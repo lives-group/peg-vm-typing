@@ -1,0 +1,4 @@
+S --> M/M*;
+F --> M/MM/"a";
+M --> !"a""a";
+@start: MFM/"a"*

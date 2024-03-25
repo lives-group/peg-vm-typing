@@ -1,0 +1,4 @@
+W --> ("d""cb")/("d"/"a"*"a"/"a");
+G --> C/W"c"C/"b"/"a"*;
+C --> W/"c"/"a"/"a"*"ab"G"d";
+@start: W*GW/WC*

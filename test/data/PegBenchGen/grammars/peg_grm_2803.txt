@@ -1,0 +1,4 @@
+R --> F"a"G;
+G --> (FR)/(FR);
+F --> "bb"/"a"/"a"*;
+@start: (GF)/G*

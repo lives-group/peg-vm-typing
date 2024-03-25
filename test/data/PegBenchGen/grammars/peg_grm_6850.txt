@@ -1,0 +1,4 @@
+S --> FFBB;
+B --> "a"/"a"*;
+F --> "a"/"a""a";
+@start: S/S/S

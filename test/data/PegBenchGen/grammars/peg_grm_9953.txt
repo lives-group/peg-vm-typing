@@ -1,0 +1,4 @@
+R --> (I/I)*;
+E --> I/I/RRI/"a";
+I --> "a"/!"a""aa"/"a";
+@start: (RRI)/(E*RR)
